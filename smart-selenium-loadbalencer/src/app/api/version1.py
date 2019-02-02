@@ -15,9 +15,9 @@ send = Blueprint('routes', __name__)
 
 
 # add for testing: methods=['POST']
-# --- cnb endpoints ---#
+# --- test endpoints ---#
 @send.route('/test', methods=['GET'])
-def process_cnb_deposits():
+def test_route():
     message = 'hello world'
     return message
 
