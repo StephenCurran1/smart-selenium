@@ -30,14 +30,12 @@ ADD scripts/start.sh /start.sh
 RUN chmod 755 /start.sh
 
 # # Add ini
-# ADD conf/uwsgi-service.ini /uwsgi-service.ini
+ADD conf/uwsgi-service.ini /uwsgi-service.ini
 
 # # copy in code
-ADD src/ /srv/root/
+ADD smart-selenium-loadbalencer/src/ /srv/root/
 
-# #worker scripts executable
-# RUN chmod -R 755 /srv/root/app/workers
 
-# EXPOSE 80
+EXPOSE 80
 
-# CMD ["/start.sh"]
+CMD ["/start.sh"]
