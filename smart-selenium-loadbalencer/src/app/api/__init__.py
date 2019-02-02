@@ -16,7 +16,7 @@ datadog.initialize(**datadog_options)
 logger.debug("statsd initialized")
 
 smart_selenium = Flask(__name__)
-smart_selenium.register_blueprint(version1.send, url_prefix='/v1')
+smart_selenium.register_blueprint(version1.send, url_prefix='/wd')
 logger.info("smart_selenium started")
 
 from . import routes
